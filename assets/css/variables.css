@@ -8,17 +8,16 @@
 
   /*========== Colors ==========*/
   /* Main Color Scheme */
-  --first-color: #5D6D7E; /* Muted Blue-Grey */
-  --first-color-light: #E1E8EB; /* Soft Light Blue-Grey */
+  --first-color: #5D6D7E; 
+  --first-color-light: #E1E8EB;
   
   /* Title and Text */
-  --title-color: #2C3E50; /* Deep Charcoal */
-  --text-color: #7F8C8D; /* Grey */
-  --text-color-light: #BDC3C7; /* Light Grey */
+  --text-color: #7F8C8D; 
+  --text-color-light: #BDC3C7; 
   
   /* Body and Background */
-  --body-color: #F4F6F7; /* Light Greyish White */
-  --container-color: #FFFFFF; /* White */
+  --body-color: #F4F6F7; 
+  --container-color: #FFFFFF; 
   
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -32,10 +31,6 @@
 
   /*========== z index ==========*/
   --z-fixed: 100;
-
-  /*toggle colours*/
-  --light-toggle: #d8dbe0;
-  --dark-toggle: #28292c;
 }
 
 /* Dark mode overrides */

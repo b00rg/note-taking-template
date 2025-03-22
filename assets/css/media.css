@@ -1,5 +1,4 @@
 /* ========== MEDIA QUERIES ==========*/
-/* For small devices reduce search*/
 @media screen and (max-width: 320px) {
     .header__search {
       width: 70%;
@@ -52,7 +51,6 @@
       font-size: 1.3rem;
     }
   
-    /* Element opacity */
     .nav__logo-name, 
     .nav__name, 
     .nav__subtitle, 
@@ -61,12 +59,10 @@
       transition: .3s;
     }
   
-    /* Navbar expanded */
     .nav:hover {
       width: var(--nav-width);
     }
   
-    /* Visible elements */
     .nav:hover .nav__logo-name {
       opacity: 1;
     }

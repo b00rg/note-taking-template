@@ -54,7 +54,7 @@
   }
   
   .header__toggle {
-    color: var(--title-color);
+    color: var(--first-color);
     cursor: pointer;
   }
   
