@@ -2,12 +2,12 @@
 const showMenu = (headerToggle, navbarId) =>{
     const toggleBtn = document.getElementById(headerToggle),
     nav = document.getElementById(navbarId)
-    
+
     // Validate that variables exist
     if(headerToggle && navbarId){
         toggleBtn.addEventListener('click', ()=>{
-            // We add the show-notes class to the div tag with the nav__menu class
-            nav.classList.toggle('show-notes')
+            // We add the show-menu class to the div tag with the nav__menu class
+            nav.classList.toggle('show-menu')
             // change icon
             toggleBtn.classList.toggle('bx-x')
         })
@@ -24,3 +24,16 @@ function colorLink(){
 }
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleSwitch = document.getElementById('toggle');
+    const body = document.body;
+
+    toggleSwitch.addEventListener('change', function(e) {
+        if (e.target.checked) {
+            body.classList.remove('dark-mode');
+        } else {
+            body.classList.add('dark-mode');
+        }
+    })
+});

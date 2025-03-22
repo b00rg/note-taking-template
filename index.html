@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/header.css"> <!-- Header CSS file -->
     <link rel="stylesheet" href="assets/css/nav.css"> <!-- Navigation CSS file -->
     <link rel="stylesheet" href="assets/css/media.css"> <!-- Media Query CSS file -->
-
+    <link rel="stylesheet" href="assets/css/toggle.css"> 
     <title>Responsive sidebar submenus</title>
 </head>
 <body>
@@ -27,6 +27,7 @@
                 <i class="fas fa-book"></i> codex
             </a>
 
+        <!-- toggle dark mode -->
             <div class="header__search">
                 <input type="search" placeholder="Search" class="header__input">
                 <i class='bx bx-search header__icon'></i>
@@ -34,6 +35,12 @@
 
             <div class="header__toggle">
                 <i class='bx bx-notes' id="header-toggle"></i>
+            </div>
+
+            <div class="toggle-switch">
+                <label>
+                    <input type="checkbox" id="toggle"> <span class="slider"></span>
+                </label>
             </div>
         </div>
     </header>
