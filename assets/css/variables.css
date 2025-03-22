@@ -32,6 +32,10 @@
 
   /*========== z index ==========*/
   --z-fixed: 100;
+
+  /*toggle colours*/
+  --light-toggle: #d8dbe0;
+  --dark-toggle: #28292c;
 }
 
 /* Dark mode overrides */
