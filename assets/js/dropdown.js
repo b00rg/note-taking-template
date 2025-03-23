@@ -12,9 +12,15 @@ function addNewNote(subjectId) {
         // Append the new note to the subject folder
         folderContent.appendChild(noteLink);
 
-        // Add event listener to open note content
+        // Add event listener to update the content in the main section
         noteLink.addEventListener('click', function() {
-            document.getElementById('noteContent').innerHTML = `<h2>${noteTitle}</h2><p>This is the content for the note.</p>`;
+            // Update the main content with the new note title and placeholder text
+            document.querySelector('main section').innerHTML = `
+                <h1>${noteTitle}</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            `;
         });
     }
 }
