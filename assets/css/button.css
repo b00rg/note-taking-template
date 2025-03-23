@@ -23,28 +23,26 @@
     font-size: var(--smaller-font-size);  
 }
 
-/* Additional styling for the Add New Note button: FIX THIS!! it does not match */
-/* Ensure the Add New Note button is styled correctly */
 .add-note-btn {
     background: none;
     border: none;
     color: var(--text-color); 
-    font-size: 0.1rem; /* Set the size of the plus symbol */
+    font-size: 0.1rem; 
     cursor: pointer;
     transition: color 0.4s ease-in-out;  
     display: inline-flex;
-    align-items: center; /* Align the plus icon */
+    align-items: center; 
 }
 
 .add-note-btn:hover {
-    color: var(--first-color);  /* Change color on hover */
+    color: var(--first-color); 
 }
 
 .add-note-btn i {
-    font-size: 1 rem; /* Set the size of the plus icon */
-    margin-right: 0; /* No margin on the right */
+    font-size: 1 rem; 
+    margin-right: 0; 
 }
 
 .add-note-btn span {
-    display: none; /* Hide the text */
+    display: none; 
 }
