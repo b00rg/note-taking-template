@@ -1,0 +1,50 @@
+/* New style for the Add New Folder button */
+#addNewSubjectBtn {
+    background: none;
+    border: none;
+    color: var(--text-color); 
+    font-size: var(--normal-font-size); 
+    font-family: var(--body-font); 
+    font-weight: var(--font-medium);  
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;  
+}
+
+#addNewSubjectBtn:hover {
+    color: var(--first-color);  
+}
+
+#addNewSubjectBtn i {
+    font-size: 1.2rem; 
+    margin-right: .5rem;  
+}
+
+#addNewSubjectBtn span {
+    font-size: var(--smaller-font-size);  
+}
+
+/* Additional styling for the Add New Note button: FIX THIS!! it does not match */
+/* Ensure the Add New Note button is styled correctly */
+.add-note-btn {
+    background: none;
+    border: none;
+    color: var(--text-color); 
+    font-size: 0.1rem; /* Set the size of the plus symbol */
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;  
+    display: inline-flex;
+    align-items: center; /* Align the plus icon */
+}
+
+.add-note-btn:hover {
+    color: var(--first-color);  /* Change color on hover */
+}
+
+.add-note-btn i {
+    font-size: 1 rem; /* Set the size of the plus icon */
+    margin-right: 0; /* No margin on the right */
+}
+
+.add-note-btn span {
+    display: none; /* Hide the text */
+}
