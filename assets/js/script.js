@@ -29,11 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleSwitch = document.getElementById('toggle');
     const body = document.body;
 
-    toggleSwitch.addEventListener('change', function(e) {
-        if (e.target.checked) {
+    // Check saved theme
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        toggleSwitch.checked = false;  // Show "Light Mode" (unchecked)
+    } else {
+        body.classList.remove('dark-mode');
+        toggleSwitch.checked = true;  // Show "Dark Mode" (checked)
+    }
+
+    toggleSwitch.addEventListener('change', function() {
+        if (toggleSwitch.checked) {
             body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');  // Save Light Mode
         } else {
             body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');   // Save Dark Mode
         }
-    })
+    });
 });
