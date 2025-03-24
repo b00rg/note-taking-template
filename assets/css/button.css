@@ -2,25 +2,25 @@
 #addNewSubjectBtn {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align text properly */
+    justify-content: flex-start; /* Center text */
     width: 100%;
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem; /* Reduce top margin */
     border: none;
     background: none;
 }
 
+
 /* Keep Add New Note button fixed at bottom */
 .nav__dropdown-collapse {
     position: relative;
-    padding-bottom: 2.5rem; /* Ensure space for the button */
+    padding-bottom: 2rem; /* Ensure space for the button */
 }
 
 .add-note-btn {
     position: absolute;
     bottom: 0;
-    left: 47.5%; /* Center the button */
-    transform: translateX(-52.5%);
+    left: 49%; /* Center the button */
+    transform: translateX(-51%);
     background-color: var(--first-color-light);
     padding: 5px 10px;
     border-radius: 5px;
@@ -33,7 +33,6 @@
     padding: 0.5rem 1rem; /* Add padding to the notes */
     display: flex;
     justify-content: center; /* Center the text horizontally */
-    align-items: center; /* Align items vertically in the center */
     border-radius: 4px;
     text-align: center; /* Ensure text is centered within the link */
 }
