@@ -1,48 +1,53 @@
-/* New style for the Add New Folder button */
+/* Ensure Add New Folder button is aligned with the header */
 #addNewSubjectBtn {
-    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text properly */
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
     border: none;
-    color: var(--text-color); 
-    font-size: var(--normal-font-size); 
-    font-family: var(--body-font); 
-    font-weight: var(--font-medium);  
-    cursor: pointer;
-    transition: color 0.4s ease-in-out;  
+    background: none;
 }
 
-#addNewSubjectBtn:hover {
-    color: var(--first-color);  
-}
-
-#addNewSubjectBtn i {
-    font-size: 1.2rem; 
-    margin-right: .5rem;  
-}
-
-#addNewSubjectBtn span {
-    font-size: var(--smaller-font-size);  
+/* Keep Add New Note button fixed at bottom */
+.nav__dropdown-collapse {
+    position: relative;
+    padding-bottom: 2.5rem; /* Ensure space for the button */
 }
 
 .add-note-btn {
-    background: none;
+    position: absolute;
+    bottom: 0;
+    left: 47.5%; /* Center the button */
+    transform: translateX(-52.5%);
+    background-color: var(--first-color-light);
+    padding: 5px 10px;
+    border-radius: 5px;
     border: none;
-    color: var(--text-color); 
-    font-size: 0.1rem; 
-    cursor: pointer;
-    transition: color 0.4s ease-in-out;  
-    display: inline-flex;
-    align-items: center; 
+    background: none;
 }
 
-.add-note-btn:hover {
-    color: var(--first-color); 
+/* Ensure notes inside dropdown are spaced neatly */
+.nav__dropdown-content a {
+    padding: 0.5rem 1rem; /* Add padding to the notes */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Align items vertically in the center */
+    border-radius: 4px;
+    text-align: center; /* Ensure text is centered within the link */
 }
 
-.add-note-btn i {
-    font-size: 1 rem; 
-    margin-right: 0; 
+.nav__dropdown-content a:hover {
+    background-color: var(--container-color);
 }
 
-.add-note-btn span {
-    display: none; 
+/* Add padding to the notes container to align with dropdown */
+.nav__dropdown-content {
+    padding: 0 1rem;
+}
+
+/* Add some margin to the top of the first note to match the dropdown */
+.nav__dropdown-content a:first-child {
+    margin-top: 0.5rem; /* Adjust as needed */
 }
