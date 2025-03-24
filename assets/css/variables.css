@@ -36,16 +36,16 @@
 /* Dark mode overrides */
 .dark-mode {
   /* Main Color Scheme */
-  --first-color: #A3B1C6; /* Soft Grey-Blue (used for highlights, links, etc.) */
-  --first-color-light: #5C6D7C; /* Slightly darker Grey-Blue */
+  --first-color: #A3B1C6; 
+  --first-color-light: #5C6D7C; 
 
   /* Title and Text */
-  --title-color: #FFFFFF; /* Pure White (for titles) */
-  --text-color: #D1D9E6; /* Light Grey (for general text) */
-  --text-color-light: #A5B4C4; /* Lighter Grey for secondary text */
+  --title-color: #FFFFFF; 
+  --text-color: #D1D9E6; 
+  --text-color-light: #A5B4C4; 
 
   /* Body and Background */
-  --body-color: #1E2328; /* Very Dark Greyish Blue (for the background) */
-  --container-color: #262C34; /* Dark Grey for containers */
-  --highlight-color: #3F8BFC; /* Soft Blue for highlights */
+  --body-color: #1E2328; 
+  --container-color: #262C34;
+  --highlight-color: #3F8BFC; 
 }
