@@ -31,19 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
-        toggleSwitch.checked = false;  // Show "Light Mode" (unchecked)
+        toggleSwitch.checked = false; 
     } else {
         body.classList.remove('dark-mode');
-        toggleSwitch.checked = true;  // Show "Dark Mode" (checked)
+        toggleSwitch.checked = true;  
     }
 
     toggleSwitch.addEventListener('change', function() {
         if (toggleSwitch.checked) {
             body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');  // Save Light Mode
+            localStorage.setItem('theme', 'light');  
         } else {
             body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');   // Save Dark Mode
+            localStorage.setItem('theme', 'dark');  
         }
     });
 });
