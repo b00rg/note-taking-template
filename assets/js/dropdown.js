@@ -22,13 +22,45 @@ function addNewNote(subjectId) {
         folderContent.appendChild(noteLink);
 
         noteLink.addEventListener('click', function() {
-            document.querySelector('main section').innerHTML = `
+            const mainSection = document.querySelector('main section');
+        
+            if (!mainSection) {
+                console.error("Error: 'main section' not found in the document.");
+                return;
+            }
+        
+            // Inject the editor textarea
+            mainSection.innerHTML = `
                 <h1>${noteTitle}</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <textarea id="editor"></textarea>
             `;
+        
+            // Load SimpleMDE CSS if it's not already loaded
+            if (!document.querySelector("#simplemde-css")) {
+                const cssLink = document.createElement("link");
+                cssLink.id = "simplemde-css";
+                cssLink.rel = "stylesheet";
+                cssLink.href = "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"; // Use local file if needed
+                document.head.appendChild(cssLink);
+            }
+        
+            // Check if SimpleMDE is already loaded
+            if (window.SimpleMDE) {
+                setTimeout(() => {
+                    new SimpleMDE({ element: document.getElementById("editor") });
+                }, 100); // Small delay to ensure rendering
+            } else {
+                // Load SimpleMDE dynamically
+                const script = document.createElement("script");
+                script.src = "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"; // Use local file if needed
+                script.onload = () => {
+                    console.log("SimpleMDE Loaded.");
+                    new SimpleMDE({ element: document.getElementById("editor") });
+                };
+                document.body.appendChild(script);
+            }
         });
+        
     }
 }
 
