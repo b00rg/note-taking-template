@@ -1,68 +1,4 @@
-// Function to handle adding a new note in a subject folder
-function addNewNote(subjectId) {
-    const noteTitle = prompt("Enter the note title for " + subjectId + ":");
-    if (noteTitle) {
-        const folderContent = document.getElementById(subjectId + "Folders").querySelector('.nav__dropdown-content'); // Select the correct container
-        const noteLink = document.createElement('a');
-        noteLink.href = "#";
-        noteLink.classList.add('nav__dropdown-content', 'a'); 
-        noteLink.style.display = "block";
-        noteLink.innerText = noteTitle;
-        noteLink.style.padding = '0.5rem 1rem'; 
-        noteLink.style.display = 'flex';
-        noteLink.style.justifyContent = 'center';
-        noteLink.style.alignItems = 'center';
-        noteLink.style.borderRadius = '4px';
-        noteLink.style.textAlign = 'center';
-
-        noteLink.style.fontSize = 'var(--smaller-font-size)'; 
-        console.log(noteLink.style.smallerfontSize);
-        noteLink.style.color = 'var(--first-color)'; 
-
-        folderContent.appendChild(noteLink);
-
-        noteLink.addEventListener('click', function() {
-            const mainSection = document.querySelector('main section');
-        
-            if (!mainSection) {
-                console.error("Error: 'main section' not found in the document.");
-                return;
-            }
-        
-            // Inject the editor textarea
-            mainSection.innerHTML = `
-                <h1>${noteTitle}</h1>
-                <textarea id="editor"></textarea>
-            `;
-        
-            // Load SimpleMDE CSS if it's not already loaded
-            if (!document.querySelector("#simplemde-css")) {
-                const cssLink = document.createElement("link");
-                cssLink.id = "simplemde-css";
-                cssLink.rel = "stylesheet";
-                cssLink.href = "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"; // Use local file if needed
-                document.head.appendChild(cssLink);
-            }
-        
-            // Check if SimpleMDE is already loaded
-            if (window.SimpleMDE) {
-                setTimeout(() => {
-                    new SimpleMDE({ element: document.getElementById("editor") });
-                }, 100); // Small delay to ensure rendering
-            } else {
-                // Load SimpleMDE dynamically
-                const script = document.createElement("script");
-                script.src = "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"; // Use local file if needed
-                script.onload = () => {
-                    console.log("SimpleMDE Loaded.");
-                    new SimpleMDE({ element: document.getElementById("editor") });
-                };
-                document.body.appendChild(script);
-            }
-        });
-        
-    }
-}
+import { addNewNote } from "./markdownEditor/note.js";
 
 // Function to handle adding a new branch
 // Function to handle adding a new branch
@@ -109,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
         folderContent.appendChild(addBranchButton);
     }
 });
-
 
 
 // Event listener for adding a new subject folder
