@@ -1,7 +1,6 @@
 import { addNewNote } from "./markdownEditor/note.js";
 
-// Function to handle adding a new branch
-// Function to handle adding a new branch
+/*==================== ADD BRANCH ====================*/
 function addNewBranch() {
     const inheritance = prompt("Enter the branch you would like to inherit from:");
     const branchTitle = prompt("Enter the branch title:");
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
+/*==================== ADD SUBJECT ====================*/
 // Event listener for adding a new subject folder
 document.getElementById('addNewSubjectBtn').addEventListener('click', function() {
     const subjectName = prompt("Enter the new subject name:");
