@@ -1,0 +1,14 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+package.json
+
+# Environment variables
+.env
+
+# misc
+test.html
+.vscode/
+
